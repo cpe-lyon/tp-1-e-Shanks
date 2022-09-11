@@ -114,3 +114,15 @@ Pour afficher la page de manuel de /etc/passwd : **man 5 passwd**.
 5 - Avant de quitter nano, on enregistre le fichier avec **CTRL + S**.
 
 # **Exercice 4. Personnalisation du shell**
+
+1 - Copie du fichier .bashrc en .bashrc_bak : **cp -r .bashrc .bashrc_bak**.
+
+2 -
+* Ouverture du fichier dans nano : **CTRL + R** => .bashrc
+* on se déplace dans le fichier puis on décommente la ligne force_prompt_color=yes
+* Enregistrement du fichier : **CTRL + S**
+* Sortie de nano : **CTRL + X**
+
+3 - oui vert et bleu.
+
+4 - **\[\033[35m\][\A]\[\033[00m\] - \[\033[01;32m\]\u@\h\[033[00m\]:\[\033[96m\]\w\[\033[00m\]\$** (pour afficher l'invite de commande sous la forme: heure affichée en violet et entre crochets, et le chemin du dossier courant en cyan)
