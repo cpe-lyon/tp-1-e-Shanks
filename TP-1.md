@@ -126,3 +126,4 @@ Pour afficher la page de manuel de /etc/passwd : **man 5 passwd**.
 3 - oui vert et bleu.
 
 4 - **\[\033[35m\][\A]\[\033[00m\] - \[\033[01;32m\]\u@\h\[033[00m\]:\[\033[96m\]\w\[\033[00m\]\$** (pour afficher l'invite de commande sous la forme: heure affichée en violet et entre crochets, et le chemin du dossier courant en cyan)
+![test](capture_E4Q4.jpg)
