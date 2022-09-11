@@ -16,7 +16,7 @@
 
 2 - Pareil que la question précédente : **cd /var** ou **cd..**.
 
-3 - Le retour dans le dossier personnel se fait avec *cd**.
+3 - Le retour dans le dossier personnel se fait avec **cd**.
 
 4 - Sans utiliser de chemin, pour revenir au dossier précédent, il faut utiliser la commande **cd -**
 
@@ -24,11 +24,12 @@
 
 6 - La commande **sudo cd /root** ne fonctionne pas. Cela s'explique par le fait que la commande **cd** est intégrée dans le shell tandis que **sudo** ne fonctionne qu'avec les executables.
 
-7 - D'abord la création des deux dossiers : **mkdir Dossier1** et **mkdir Dossier2**;
-entrer dans le Dossier1 avec "cd Dossier1" puis créer le Fichier1 avec **touch Fichier1**;
-sortir du Dossier1 avec **cd ..**;
-entrer dans Dossier2 avec **cd Dossier2** puis créer les deux sous-dossiers : **mkdir Dossier2.1**, **mkdir Dossier2.2**;
-entrer dans Dossier2.2 avec **cd Dossier2.2** puis créer les fichiers : **touch Fichier2.txt**, **touch Fichier3.txt**.
+7 - 
+* D'abord la création des deux dossiers : **mkdir Dossier1** et **mkdir Dossier2**
+* entrer dans le Dossier1 avec **cd Dossier1** puis créer le Fichier1 avec **touch Fichier1**
+* sortir du Dossier1 avec **cd ..**
+* entrer dans Dossier2 avec **cd Dossier2** puis créer les deux sous-dossiers : **mkdir Dossier2.1**, **mkdir Dossier2.2**
+* entrer dans Dossier2.2 avec **cd Dossier2.2** puis créer les fichiers : **touch Fichier2.txt**, **touch Fichier3.txt**
 
 8 - Avec la commande **rm Dossier1/Fichier1.txt** on peut supprimer le fichier. Nonobstant, supprimer le Dossier1 avec **rm Dossier1** ne fonctionne pas (car c'est un dossier).
 
@@ -88,4 +89,28 @@ Pour afficher la page de manuel de /etc/passwd : **man 5 passwd**.
 
 19 - En tapant la commande **wc -l /etc/passwd**, on peut obtenir le nombre de lignes et de ce fait le nombre d'utilisateur ayant un compte sur la machine.
 
-20 - On recherche d'abord les pages contenant le mot *conversion* dans leur description puis on compte : **man -k conversion | wc -l**
+20 - On recherche d'abord les pages contenant le mot *conversion* dans leur description puis on compte : **man -k conversion | wc -l**.
+
+21 - On peut trouver tous les fichiers nommés 'passwd' présents sur la machine grâce à la commande : **sudo find / -type f -name passwd**.
+
+22 - **sudo find / -type f -name passwd > list_passwd_files.txt 2>> /dev/null**
+
+23 -
+
+24 -
+
+25 -
+
+# **Exercice 3 : Découverte de l’éditeur de texte nano**
+
+1 - On copie le fichier /var/log/syslog et on le colle dans notre dossier personnel avec la commande **cp -r /var/log/syslog log.txt**. **nano** pour lancer nano puis **CTRL + R** suivi du nom du fichier log.txt pour le lancer.
+
+2 - Dans nano: ouverture du fichier log.txt avec **CTRL + R**; une fois ouvert on entre le mot (kernel) à remplacer avec **ALT + R**; puis on saisit le nouveau mot (noyau); enfin on presse 'A' pour remplacer toutes les occurences.
+
+3 - D'abord, **ALT + A** pour placer un genre de marqueur au début du fichier. Ensuite on compte 10 lignes (en descendant avec la flèche du clavier) et on coupe les 10 premières lignes sélectionnées avec **CTRL + SHIFT + K**. Enfin, on se place à la fin du fichier puis on colle avec **CTRL + U**.
+
+4 - Annuler cette action avec **ALT + U**.
+
+5 - Avant de quitter nano, on enregistre le fichier avec **CTRL + S**.
+
+# **Exercice 4. Personnalisation du shell**
