@@ -22,7 +22,7 @@
 
 5 - L'accès au dossier /root est refusé.
 
-6 - La commande **sudo cd /root** ne fonctionne pas. Cela s'explique par le fait que la commande **cd** est intégrée dans le shell tandis que **sudo** ne fonctionne qu'avec les executables.
+6 - La commande **sudo cd /root** ne fonctionne pas. Cela s'explique par le fait que la commande **cd** est intégrée dans le shell (built-in command). **sudo** s'attend à trouver quelque chose qui se trouve dans la variable d'environnement PATH. Or, **cd** n'est pas dans PATH puisque c'est une commande interne à bash.
 
 7 - 
 * D'abord la création des deux dossiers : **mkdir Dossier1** et **mkdir Dossier2**
@@ -85,7 +85,7 @@ Pour afficher les lignes 10 à 20 du fichier /var/log/syslog : **???**.
 * l'interpréteur de commande de l'utilisateur
 Pour afficher la page de manuel de /etc/passwd : **man 5 passwd**.
 
-18 - **cut -d ":" -f 1 /etc/password | sort -r**. En effet, **cut -d ":" -f 1 /etc/passwd** permet de couper chaque ligne de sortie du fichier /etc/passwd jusqu'au délimiteur ":". Ensuite, la sortie de cette commande est redirigé en entrée de la seconde, **sort -r**, qui va à son tour trier dans l'ordre décroissant.
+18 - **cut -d ":" -f 1 /etc/password | sort -r**. En effet, **cut -d ":" -f 1 /etc/passwd** permet de couper chaque ligne de sortie du fichier /etc/passwd jusqu'au délimiteur ":" (**-f 1** spécifie la première colonne). Ensuite, la sortie de cette commande est redirigé en entrée de la seconde, **sort -r**, qui va à son tour trier dans l'ordre décroissant.
 
 19 - En tapant la commande **wc -l /etc/passwd**, on peut obtenir le nombre de lignes et de ce fait le nombre d'utilisateur ayant un compte sur la machine.
 
@@ -123,7 +123,7 @@ Pour afficher la page de manuel de /etc/passwd : **man 5 passwd**.
 * Enregistrement du fichier : **CTRL + S**
 * Sortie de nano : **CTRL + X**
 
-3 - oui vert et bleu.
+3 - Oui, vert pour l'utilisateur/hôte et bleu pour le chemin du dossier courant.
 
 4 - **\[\033[35m\][\A]\[\033[00m\] - \[\033[01;32m\]\u@\h\[033[00m\]:\[\033[96m\]\w\[\033[00m\]\$** (pour afficher l'invite de commande sous la forme: heure affichée en violet et entre crochets, et le chemin du dossier courant en cyan)
 ![test](capture_E4Q4.jpg)
