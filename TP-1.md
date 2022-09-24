@@ -14,7 +14,7 @@
 
 1 - Pour aller dans un dossier : "cd [directory]"; ici : **cd /var/log**.
 
-2 - Pareil que la question précédente : **cd /var** ou **cd..**.
+2 - Pareil que la question précédente : **cd /var** ou **cd ..**.
 
 3 - Le retour dans le dossier personnel se fait avec **cd**.
 
